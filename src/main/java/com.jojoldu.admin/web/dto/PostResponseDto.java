@@ -1,6 +1,6 @@
 package com.jojoldu.admin.web.dto;
 
-import com.jojoldu.admin.domain.Post;
+import com.jojoldu.admin.domain.post.Post;
 import lombok.Getter;
 
 @Getter

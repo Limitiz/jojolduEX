@@ -1,15 +1,13 @@
 package com.jojoldu.admin.service;
 
-import com.jojoldu.admin.domain.Post;
-import com.jojoldu.admin.domain.PostRepository;
+import com.jojoldu.admin.domain.post.Post;
+import com.jojoldu.admin.domain.post.PostRepository;
 import com.jojoldu.admin.web.dto.PostResponseDto;
 import com.jojoldu.admin.web.dto.PostSaveRequestDto;
 import com.jojoldu.admin.web.dto.PostUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service

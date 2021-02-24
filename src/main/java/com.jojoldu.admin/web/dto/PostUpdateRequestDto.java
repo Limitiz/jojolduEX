@@ -1,6 +1,5 @@
 package com.jojoldu.admin.web.dto;
 
-import com.jojoldu.admin.domain.Post;
 import lombok.Getter;
 import lombok.Builder;
 import lombok.NoArgsConstructor;

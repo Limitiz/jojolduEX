@@ -1,4 +1,4 @@
-package com.jojoldu.admin.domain;
+package com.jojoldu.admin.domain.post;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

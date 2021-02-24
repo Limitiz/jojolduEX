@@ -1,8 +1,8 @@
 package com.jojoldu.admin.web;
 
-import com.jojoldu.admin.domain.Post;
-import com.jojoldu.admin.domain.PostRepository;
-import com.jojoldu.admin.web.dto.PostSaveRequestDto;
+import com.jojoldu.admin.domain.post.Post;
+import com.jojoldu.admin.domain.post.PostRepository;
+import com.jojoldu.admin.web.dto.*;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -63,5 +65,42 @@ public class PostControllerTest {
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
         assertThat(all.get(0).getAuthor()).isEqualTo("jy@naver.com");
+    }
+
+    @Test
+    public void post_update() throws Exception{
+        //given
+        Post savedPost
+                = postRepository.save(Post.builder()
+        .title("title")
+        .content("content")
+        .author("jy@naver.com")
+        .build());
+
+        Long updateId = savedPost.getId();
+        String updateTitle = "title2";
+        String updateContent = "content2";
+        PostUpdateRequestDto requestDto
+                = PostUpdateRequestDto.builder()
+                .title(updateTitle)
+                .content(updateContent)
+                .build();
+        String url = "http://localhost:"+port+"/api/post/"+updateId;
+
+        HttpEntity<PostUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
+
+        //when
+        ResponseEntity<Long> responseEntity
+                = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
+
+        //then
+        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(responseEntity.getBody()).isGreaterThan(0L);
+
+        List<Post> all = postRepository.findAll();
+        assertThat(all.get(0).getTitle()).isEqualTo(updateTitle);
+        assertThat(all.get(0).getContent()).isEqualTo(updateContent);
+
+
     }
 }
