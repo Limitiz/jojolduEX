@@ -2,12 +2,16 @@ package com.jojoldu.admin.service;
 
 import com.jojoldu.admin.domain.post.Post;
 import com.jojoldu.admin.domain.post.PostRepository;
+import com.jojoldu.admin.web.dto.PostListResponseDto;
 import com.jojoldu.admin.web.dto.PostResponseDto;
 import com.jojoldu.admin.web.dto.PostSaveRequestDto;
 import com.jojoldu.admin.web.dto.PostUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -30,5 +34,20 @@ public class PostService {
         Post entity = postRepository.findById(id)
                 .orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
         return new PostResponseDto(entity);
+    }
+
+    @Transactional(readOnly = true)
+    public List<PostListResponseDto> findAllDesc(){
+        return postRepository.findAllDesc().stream()
+                .map(PostListResponseDto::new)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public void delete (Long id){
+        Post post = postRepository.findById(id)
+                .orElseThrow(()-> new
+                        IllegalArgumentException("cannot find id "+id));
+        postRepository.delete(post);
     }
 }
