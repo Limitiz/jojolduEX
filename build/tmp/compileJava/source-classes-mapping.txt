@@ -1,13 +1,12 @@
 com.jojoldu.admin/web/dto/PostSaveRequestDto.java
  com.jojoldu.admin.web.dto.PostSaveRequestDto
  com.jojoldu.admin.web.dto.PostSaveRequestDto$PostSaveRequestDtoBuilder
-com.jojoldu.admin/web/IndexController.java
- com.jojoldu.admin.web.IndexController
+com.jojoldu.admin/service/PostService.java
+ com.jojoldu.admin.service.PostService
 com.jojoldu.admin/web/dto/PostResponseDto.java
  com.jojoldu.admin.web.dto.PostResponseDto
-com.jojoldu.admin/web/dto/PostUpdateRequestDto.java
- com.jojoldu.admin.web.dto.PostUpdateRequestDto
- com.jojoldu.admin.web.dto.PostUpdateRequestDto$PostUpdateRequestDtoBuilder
+com.jojoldu.admin/web/PostController.java
+ com.jojoldu.admin.web.PostController
 com.jojoldu.admin/domain/BaseTimeEntity.java
  com.jojoldu.admin.domain.BaseTimeEntity
 com.jojoldu.admin/web/dto/PostListResponseDto.java
@@ -19,7 +18,8 @@ com.jojoldu.admin/Application.java
 com.jojoldu.admin/domain/post/Post.java
  com.jojoldu.admin.domain.post.Post
  com.jojoldu.admin.domain.post.Post$PostBuilder
-com.jojoldu.admin/service/PostService.java
- com.jojoldu.admin.service.PostService
-com.jojoldu.admin/web/PostController.java
- com.jojoldu.admin.web.PostController
+com.jojoldu.admin/web/dto/PostUpdateRequestDto.java
+ com.jojoldu.admin.web.dto.PostUpdateRequestDto
+ com.jojoldu.admin.web.dto.PostUpdateRequestDto$PostUpdateRequestDtoBuilder
+com.jojoldu.admin/web/IndexController.java
+ com.jojoldu.admin.web.IndexController
