@@ -1,4 +1,4 @@
-plugins { // (1)
+plugins {
     id 'org.springframework.boot' version '2.4.1' // RELEASE 삭제
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
@@ -31,6 +31,11 @@ dependencies {
     implementation("org.mariadb.jdbc:mariadb-java-client")
     implementation('com.h2database:h2')
 
+    //소셜로그인 처럼 client 입장에서 소셜 기능 구현시 필요한 의존성
+    //spring-security-oauth2-client와 spring-security-oauth2-jose를 기본으로 관리
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    implementation('org.springframework.session:spring-session-jdbc')
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation("org.springframework.security:spring-security-test")
     }

@@ -1,6 +1,6 @@
-com/jojoldu/admin/web/IndexControllerTest.java
- com.jojoldu.admin.web.IndexControllerTest
-com/jojoldu/admin/web/PostControllerTest.java
- com.jojoldu.admin.web.PostControllerTest
 com/jojoldu/admin/domain/PostRepositoryTest.java
  com.jojoldu.admin.domain.PostRepositoryTest
+com/jojoldu/admin/web/PostControllerTest.java
+ com.jojoldu.admin.web.PostControllerTest
+com/jojoldu/admin/web/IndexControllerTest.java
+ com.jojoldu.admin.web.IndexControllerTest

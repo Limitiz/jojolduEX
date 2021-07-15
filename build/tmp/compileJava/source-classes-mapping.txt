@@ -1,18 +1,17 @@
+com.jojoldu.admin/config/auth/dto/OAuthAttributes.java
+ com.jojoldu.admin.config.auth.dto.OAuthAttributes
+ com.jojoldu.admin.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
+com.jojoldu.admin/config/auth/CustomOAuth2UserService.java
+ com.jojoldu.admin.config.auth.CustomOAuth2UserService
 com.jojoldu.admin/web/dto/PostSaveRequestDto.java
  com.jojoldu.admin.web.dto.PostSaveRequestDto
  com.jojoldu.admin.web.dto.PostSaveRequestDto$PostSaveRequestDtoBuilder
-com.jojoldu.admin/service/PostService.java
- com.jojoldu.admin.service.PostService
-com.jojoldu.admin/web/dto/PostResponseDto.java
- com.jojoldu.admin.web.dto.PostResponseDto
-com.jojoldu.admin/web/PostController.java
- com.jojoldu.admin.web.PostController
-com.jojoldu.admin/domain/BaseTimeEntity.java
- com.jojoldu.admin.domain.BaseTimeEntity
 com.jojoldu.admin/web/dto/PostListResponseDto.java
  com.jojoldu.admin.web.dto.PostListResponseDto
-com.jojoldu.admin/domain/post/PostRepository.java
- com.jojoldu.admin.domain.post.PostRepository
+com.jojoldu.admin/domain/user/UserRepository.java
+ com.jojoldu.admin.domain.user.UserRepository
+com.jojoldu.admin/config/auth/dto/SessionUser.java
+ com.jojoldu.admin.config.auth.dto.SessionUser
 com.jojoldu.admin/Application.java
  com.jojoldu.admin.Application
 com.jojoldu.admin/domain/post/Post.java
@@ -21,5 +20,22 @@ com.jojoldu.admin/domain/post/Post.java
 com.jojoldu.admin/web/dto/PostUpdateRequestDto.java
  com.jojoldu.admin.web.dto.PostUpdateRequestDto
  com.jojoldu.admin.web.dto.PostUpdateRequestDto$PostUpdateRequestDtoBuilder
+com.jojoldu.admin/domain/user/User.java
+ com.jojoldu.admin.domain.user.User
+ com.jojoldu.admin.domain.user.User$UserBuilder
+com.jojoldu.admin/domain/user/Role.java
+ com.jojoldu.admin.domain.user.Role
 com.jojoldu.admin/web/IndexController.java
  com.jojoldu.admin.web.IndexController
+com.jojoldu.admin/service/PostService.java
+ com.jojoldu.admin.service.PostService
+com.jojoldu.admin/config/auth/SecurityConfig.java
+ com.jojoldu.admin.config.auth.SecurityConfig
+com.jojoldu.admin/web/dto/PostResponseDto.java
+ com.jojoldu.admin.web.dto.PostResponseDto
+com.jojoldu.admin/web/PostController.java
+ com.jojoldu.admin.web.PostController
+com.jojoldu.admin/domain/BaseTimeEntity.java
+ com.jojoldu.admin.domain.BaseTimeEntity
+com.jojoldu.admin/domain/post/PostRepository.java
+ com.jojoldu.admin.domain.post.PostRepository
